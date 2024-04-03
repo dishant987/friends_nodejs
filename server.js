@@ -6,8 +6,12 @@ import connect from './database/conn.js';
 import router from './router/route.js';
 const app = express()
 
+const corsOptions = {
+    origin: 'https://react-friends-fn72.onrender.com',
+  };
+
 app.use(morgan('tiny'));
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 config();
 
