@@ -28,7 +28,7 @@ connect()
 
 // Middleware
 app.use(morgan("tiny")); // Logging middleware
-app.use(cors({ origin: "https://react-friends-fn72.onrender.com" })); // CORS middleware
+app.use(cors({ origin: "https://react-friends-dy03.onrender.com" })); // CORS middleware
 app.use(express.json()); // Body parser middleware
 
 // Routes
