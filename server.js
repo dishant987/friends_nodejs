@@ -4,6 +4,7 @@ import cors from "cors";
 import { config } from "dotenv";
 import connect from "./database/conn.js";
 import router from "./router/route.js";
+import job from "./cron/cron.js";
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -25,6 +26,8 @@ connect()
     // Terminate the process if database connection fails
     process.exit(1);
   });
+
+job.start()
 
 // Middleware
 app.use(morgan("tiny")); // Logging middleware
